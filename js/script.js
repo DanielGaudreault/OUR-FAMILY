@@ -1,35 +1,27 @@
-// script.js – subtle interactions
+// script.js – polished interactions
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('🌳 Family Roots — enhanced.');
-
-  // hero title colour shift
+  // Hero title hover effect
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) {
-    heroTitle.addEventListener('mouseenter', function () {
-      this.style.transition = 'color 0.25s';
-      this.style.color = '#d4a373';
-    });
-    heroTitle.addEventListener('mouseleave', function () {
-      this.style.color = '#1f3a44';
-    });
+    heroTitle.addEventListener('mouseenter', () => heroTitle.style.color = '#d4a373');
+    heroTitle.addEventListener('mouseleave', () => heroTitle.style.color = '#1f3a44');
   }
 
-  // card pulse on click
-  const cards = document.querySelectorAll('.card');
-  cards.forEach((card) => {
+  // Card click feedback
+  document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', function () {
       this.style.transform = 'scale(0.97)';
-      setTimeout(() => { this.style.transform = ''; }, 150);
+      setTimeout(() => this.style.transform = '', 150);
     });
   });
 
-  // update footer year
+  // Update footer year dynamically
   const footerYear = document.querySelector('footer p');
   if (footerYear) {
-    const currentYear = new Date().getFullYear();
-    if (footerYear.innerHTML.includes('2026')) {
-      footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
-    }
+    const year = new Date().getFullYear();
+    footerYear.textContent = footerYear.textContent.replace('2026', year);
   }
+
+  console.log('🌳 Family Roots — beautifully enhanced.');
 });
