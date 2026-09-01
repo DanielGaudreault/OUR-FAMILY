@@ -1,85 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Our Family · Family</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Roots · Family</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/MyLogo.png">
 </head>
 <body>
-    <header class="header-banner">
-        <div class="banner-content">
-            <h1>🏡 The Family Roots</h1>
-            <p>Together through generations · est. 1950</p>
+    <div class="home-link" onclick="goToHomePage()">
+        <img src="images/MyLogo.png" alt="Home">
+    </div>
+
+    <div class="side-tab" id="sideTab">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="family.html" class="nav-link active">Family</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <button class="side-tab-toggle" onclick="toggleSideTab()">
+        <span class="side-tab-span"><i class="fas fa-bars"></i> Menu</span>
+    </button>
+
+    <section class="page-hero" style="padding-top: 100px;">
+        <div class="page-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="color: #fff; font-size: 48px; font-weight: 300; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">👨‍👩‍👧‍👦 Our Family</h1>
+            <p style="color: #f0f0f0; text-align: center; font-size: 20px; margin-bottom: 40px;">Three generations, one big heart.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                    <i class="fas fa-user-tie" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Grandpa & Grandma</h3>
+                    <p style="color: #ddd;">Founders, storytellers, the roots.</p>
+                </div>
+                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                    <i class="fas fa-user-friends" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Mom & Dad</h3>
+                    <p style="color: #ddd;">The pillars, always there.</p>
+                </div>
+                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                    <i class="fas fa-child" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Kids & Cousins</h3>
+                    <p style="color: #ddd;">Laughter, energy, and joy.</p>
+                </div>
+                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
+                    <i class="fas fa-paw" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Our Pets</h3>
+                    <p style="color: #ddd;">Four-legged family members.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; background: rgba(0,0,0,0.3); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(232,184,109,0.3);">
+                <p style="color: #f0f0f0; font-size: 20px; font-style: italic;">"Family is not an important thing, it's everything." — Michael J. Fox</p>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <nav class="top-nav">
-        <div class="nav-inner">
-            <div class="logo"><i class="fas fa-tree"></i><span>Family Roots</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="family.html" class="active">Family</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
-        <h2 class="page-title">👨‍👩‍👧‍👦 Our family</h2>
-        <p class="page-subtitle">Three generations, one big heart.</p>
-
-        <div class="family-grid">
-            <div class="card family-card">
-                <i class="fas fa-user-tie"></i>
-                <h3>Grandpa & Grandma</h3>
-                <p>Founders, storytellers, the roots.</p>
-            </div>
-            <div class="card family-card">
-                <i class="fas fa-user-friends"></i>
-                <h3>Mom & Dad</h3>
-                <p>The pillars, always there.</p>
-            </div>
-            <div class="card family-card">
-                <i class="fas fa-child"></i>
-                <h3>Kids & cousins</h3>
-                <p>Laughter, energy, and joy.</p>
-            </div>
-            <div class="card family-card">
-                <i class="fas fa-paw"></i>
-                <h3>Our pets</h3>
-                <p>Four-legged family members.</p>
-            </div>
-        </div>
-
-        <div class="quote-box">
-            <p>“Family is not an important thing, it’s everything.” — Michael J. Fox</p>
-        </div>
-    </main>
-
-    <footer class="footer-banner">
-        <div class="footer-content">
-            <p>© 2026 Family Roots · made with <i class="fas fa-heart"></i></p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+    <footer>
+        <p>&copy; 2026 Family Roots. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
+        <div class="social-icons">
+            <a href="#" class="social-icon" onclick="showMessage('Facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Twitter')"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Instagram')"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('YouTube')"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Pinterest')"><i class="fab fa-pinterest"></i></a>
         </div>
     </footer>
+
     <script src="script.js"></script>
-    <style>
-        .page-title { font-weight: 300; font-size: 2.8rem; text-align: center; color: #1a3a4a; border-bottom: 3px solid #e8b86d; padding-bottom: 0.5rem; }
-        .page-subtitle { margin: 1rem 0 2.5rem; font-size: 1.15rem; color: #3b5e6b; text-align: center; }
-        .family-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2rem; }
-        .family-card i { font-size: 3rem; color: #e8b86d; margin-bottom: 0.5rem; }
-        .quote-box { background: rgba(245,230,214,0.5); backdrop-filter: blur(6px); border-radius: 34px; padding: 2.2rem; margin-top: 2.8rem; text-align: center; border: 2px solid rgba(232,184,109,0.3); }
-        .quote-box p { font-style: italic; font-size: 1.2rem; color: #1a3a4a; }
-    </style>
 </body>
 </html>
