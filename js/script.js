@@ -1,6 +1,3 @@
-// ===== script.js =====
-
-// Function to display popup message
 function showMessage(platform) {
     Swal.fire({
         title: platform,
@@ -10,18 +7,15 @@ function showMessage(platform) {
     });
 }
 
-// Function to navigate to home page
 function goToHomePage() {
     window.location.href = 'index.html';
 }
 
-// Function to toggle side tab visibility
 function toggleSideTab() {
     var sideTab = document.getElementById('sideTab');
     sideTab.classList.toggle('active');
 }
 
-// Close side tab when clicking outside
 document.addEventListener('click', function(event) {
     var sideTab = document.getElementById('sideTab');
     var toggleBtn = document.querySelector('.side-tab-toggle');
@@ -33,7 +27,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Add active class to current page link
 document.addEventListener('DOMContentLoaded', function() {
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     var links = document.querySelectorAll('.side-tab a');
@@ -45,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Update footer year
     var footerYear = document.querySelector('footer p');
     if (footerYear) {
         var year = new Date().getFullYear();
