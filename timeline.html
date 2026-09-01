@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/MyLogo.png">
 </head>
 <body>
+    <!-- ===== LOGO - TOP LEFT ===== -->
     <div class="home-link" onclick="goToHomePage()">
         <img src="images/MyLogo.png" alt="Home">
     </div>
 
+    <!-- ===== SIDE TAB ===== -->
     <div class="side-tab" id="sideTab">
         <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
         <a href="family.html" class="nav-link"><i class="fas fa-users"></i> Family</a>
@@ -23,10 +26,12 @@
         <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 
+    <!-- ===== MENU BUTTON - TOP RIGHT ===== -->
     <button class="side-tab-toggle" onclick="toggleSideTab()">
         <span class="side-tab-span">Menu</span>
     </button>
 
+    <!-- ===== PAGE CONTENT - CENTERED ===== -->
     <section class="page-hero">
         <div class="page-content" style="max-width: 800px; margin: 0 auto;">
             <h1>⏳ Family Timeline</h1>
@@ -61,6 +66,7 @@
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2026 Family Roots. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
         <div class="social-icons">
@@ -72,6 +78,236 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function showMessage(platform) {
+            Swal.fire({
+                title: platform,
+                text: 'You clicked on ' + platform,
+                icon: 'info',
+                confirmButtonText: 'Close'
+            });
+        }
+
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+
+        function toggleSideTab() {
+            var sideTab = document.getElementById('sideTab');
+            sideTab.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            var sideTab = document.getElementById('sideTab');
+            var toggleBtn = document.querySelector('.side-tab-toggle');
+            
+            if (sideTab.classList.contains('active')) {
+                if (!sideTab.contains(event.target) && !toggleBtn.contains(event.target)) {
+                    sideTab.classList.remove('active');
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var footerYear = document.querySelector('footer p');
+            if (footerYear) {
+                var year = new Date().getFullYear();
+                footerYear.textContent = footerYear.textContent.replace('2026', year);
+            }
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('images/family-wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .home-link {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .home-link img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .home-link img:hover {
+            transform: scale(1.1);
+        }
+
+        .side-tab {
+            position: fixed;
+            top: -100%;
+            right: 20px;
+            background-color: #1976d2;
+            padding: 20px;
+            z-index: 999;
+            display: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: top 0.5s ease;
+            margin-top: 10px;
+            min-width: 200px;
+        }
+
+        .side-tab.active {
+            top: 80px;
+            display: block;
+        }
+
+        .side-tab a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .side-tab a i {
+            margin-right: 12px;
+            width: 20px;
+        }
+
+        .side-tab a:hover {
+            background-color: #1565c0;
+        }
+
+        .side-tab a.active {
+            background-color: #1565c0;
+            border-left: 3px solid #ffd54f;
+        }
+
+        .side-tab-toggle {
+            background-image: linear-gradient(135deg, #008aff, #86d472);
+            border-radius: 6px;
+            box-sizing: border-box;
+            color: #ffffff;
+            display: block;
+            height: 50px;
+            font-size: 1.4em;
+            font-weight: 600;
+            padding: 4px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-decoration: none;
+            width: 7em;
+            z-index: 1000;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .side-tab-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        .side-tab-toggle .side-tab-span {
+            align-items: center;
+            background: #0e0e10;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            transition: background 0.5s ease;
+            width: 100%;
+        }
+
+        .side-tab-toggle:hover .side-tab-span {
+            background: transparent;
+        }
+
+        .page-hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 120px;
+        }
+
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .page-content h1 {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #1976d2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            color: #fff;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .social-icon:hover {
+            color: #ffd54f;
+            transform: translateY(-3px);
+            background: rgba(255, 213, 79, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .side-tab { right: 10px; min-width: 160px; padding: 15px; }
+            .side-tab-toggle { width: 5em; font-size: 0.9em; right: 10px; top: 15px; height: 45px; }
+            .home-link img { width: 60px; }
+            .page-hero { padding-top: 100px; }
+            .page-content h1 { font-size: 32px; }
+        }
+    </style>
 </body>
 </html>
