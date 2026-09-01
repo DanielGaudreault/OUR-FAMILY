@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Roots · Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <!-- Logo Home Link - LEFT SIDE -->
+    <!-- Logo Home Link - LEFT -->
     <div class="home-link" onclick="goToHomePage()">
         <img src="images/MyLogo.png" alt="Home">
     </div>
@@ -25,12 +27,12 @@
         <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 
-    <!-- Menu Toggle Button - TOP RIGHT -->
+    <!-- Menu Toggle Button - TOP RIGHT (your gradient style) -->
     <button class="side-tab-toggle" onclick="toggleSideTab()">
         <span class="side-tab-span">Menu</span>
     </button>
 
-    <!-- Hero Section - CENTERED -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to Our Family Story</h1>
@@ -39,7 +41,7 @@
         </div>
     </section>
 
-    <!-- Introduction Section - CENTERED -->
+    <!-- Introduction Section -->
     <section class="intro-section">
         <div class="intro-content">
             <h2>🏡 The Family Roots</h2>
@@ -48,28 +50,31 @@
         </div>
     </section>
 
-    <!-- Highlights Section - CENTERED -->
+    <!-- Family Highlights Section -->
     <section class="highlights-section">
         <div class="highlights-content">
-            <div class="highlight-card">
-                <i class="fas fa-users"></i>
-                <h3>Our People</h3>
-                <p>Parents, siblings, cousins – we are a big, loving crew.</p>
-            </div>
-            <div class="highlight-card">
-                <i class="fas fa-clock"></i>
-                <h3>Timeline</h3>
-                <p>From the 1950s to today – the milestones that shaped us.</p>
-            </div>
-            <div class="highlight-card">
-                <i class="fas fa-image"></i>
-                <h3>Gallery</h3>
-                <p>Smiling faces, holiday moments, and everyday magic.</p>
-            </div>
-            <div class="highlight-card">
-                <i class="fas fa-trophy"></i>
-                <h3>Achievements</h3>
-                <p>Celebrating our family's accomplishments together.</p>
+            <h2>Our Family in Focus</h2>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Our People</h3>
+                    <p>Parents, siblings, cousins – we are a big, loving crew.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timeline</h3>
+                    <p>From the 1950s to today – the milestones that shaped us.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Gallery</h3>
+                    <p>Smiling faces, holiday moments, and everyday magic.</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Achievements</h3>
+                    <p>Celebrating our family's accomplishments together.</p>
+                </div>
             </div>
         </div>
     </section>
