@@ -1,1 +1,6 @@
-
+background-image:
+linear-gradient(
+rgba(0,0,0,.5),
+rgba(0,0,0,.7)
+),
+url("https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1920");
