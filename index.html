@@ -1,0 +1,263 @@
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Heart,
+  Users,
+  Calendar,
+  Camera,
+  Trophy,
+  Home,
+} from "lucide-react";
+
+export default function OurFamilyWebsite() {
+  const [selectedNews, setSelectedNews] = useState(null);
+
+  const familyMembers = [
+    {
+      name: "Dad",
+      role: "Family Leader",
+      description: "Loves family time and helping everyone succeed.",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500",
+    },
+    {
+      name: "Mom",
+      role: "Heart of the Family",
+      description: "Keeps everyone together with love and care.",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500",
+    },
+    {
+      name: "Child 1",
+      role: "Future Star",
+      description: "Creative, energetic, and full of dreams.",
+      image:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500",
+    },
+  ];
+
+  const timeline = [
+    {
+      year: "1995",
+      event: "Parents met",
+    },
+    {
+      year: "2000",
+      event: "Family established",
+    },
+    {
+      year: "2010",
+      event: "Family home purchased",
+    },
+    {
+      year: "2024",
+      event: "Family vacation and milestone celebration",
+    },
+  ];
+
+  const updates = [
+    {
+      title: "Family Vacation",
+      description:
+        "Wonderful trip together creating lifelong memories.",
+    },
+    {
+      title: "Graduation",
+      description:
+        "Celebrating an amazing educational achievement.",
+    },
+    {
+      title: "New Family Goals",
+      description:
+        "Working together to build a brighter future.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-100">
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-20 text-center">
+        <h1 className="text-6xl font-bold mb-4">OUR-FAMILY</h1>
+        <p className="text-xl max-w-3xl mx-auto">
+          Celebrating our journey, memories, achievements, and
+          future together.
+        </p>
+      </section>
+
+      {/* Navigation */}
+      <section className="sticky top-0 bg-white shadow z-10">
+        <div className="flex flex-wrap gap-4 justify-center p-4">
+          <Button variant="outline">
+            <Home className="mr-2 h-4 w-4" />
+            Home
+          </Button>
+          <Button variant="outline">
+            <Users className="mr-2 h-4 w-4" />
+            Family
+          </Button>
+          <Button variant="outline">
+            <Calendar className="mr-2 h-4 w-4" />
+            Timeline
+          </Button>
+          <Button variant="outline">
+            <Camera className="mr-2 h-4 w-4" />
+            Gallery
+          </Button>
+          <Button variant="outline">
+            <Trophy className="mr-2 h-4 w-4" />
+            Achievements
+          </Button>
+        </div>
+      </section>
+
+      {/* Family Members */}
+      <section className="max-w-7xl mx-auto p-8">
+        <h2 className="text-4xl font-bold mb-8 text-center">
+          Meet Our Family
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {familyMembers.map((member, index) => (
+            <Card key={index} className="rounded-3xl shadow-xl">
+              {member.image}
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold">
+                  {member.name}
+                </h3>
+                <p className="text-blue-600 font-medium">
+                  {member.role}
+                </p>
+                <p className="mt-3">{member.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="bg-white py-12">
+        <h2 className="text-4xl font-bold text-center mb-10">
+          Family Timeline
+        </h2>
+
+        <div className="max-w-4xl mx-auto px-8">
+          {timeline.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center mb-8"
+            >
+              <div className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold">
+                {item.year}
+              </div>
+              <div className="ml-6 bg-slate-100 p-4 rounded-xl flex-1">
+                {item.event}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Family Updates */}
+      <section className="max-w-7xl mx-auto py-12 px-8">
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Family Updates
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {updates.map((update, index) => (
+            <Card
+              key={index}
+              className="cursor-pointer hover:scale-105 transition rounded-3xl"
+              onClick={() => setSelectedNews(update)}
+            >
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold">
+                  {update.title}
+                </h3>
+                <p className="mt-3">{update.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {selectedNews && (
+          <div className="mt-8 bg-blue-100 p-6 rounded-3xl">
+            <h3 className="text-3xl font-bold">
+              {selectedNews.title}
+            </h3>
+            <p className="mt-4">
+              {selectedNews.description}
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* Gallery */}
+      <section className="bg-white py-12">
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Family Gallery
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto px-8">
+          https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800
+          https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800
+          https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800
+        </div>
+      </section>
+
+      {/* Achievements */}
+      <section className="max-w-7xl mx-auto py-12 px-8">
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Family Achievements
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-6">
+              <Trophy className="h-10 w-10 text-yellow-500 mb-4" />
+              <h3 className="font-bold text-2xl">
+                Education
+              </h3>
+              <p>Graduations and academic success.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <Heart className="h-10 w-10 text-red-500 mb-4" />
+              <h3 className="font-bold text-2xl">
+                Family Values
+              </h3>
+              <p>Strong bonds built through love and support.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <Home className="h-10 w-10 text-green-500 mb-4" />
+              <h3 className="font-bold text-2xl">
+                Milestones
+              </h3>
+              <p>Important moments and family growth.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white text-center py-10">
+        <h3 className="text-3xl font-bold mb-3">
+          OUR-FAMILY
+        </h3>
+        <p>
+          Preserving memories, celebrating achievements,
+          building our future together.
+        </p>
+        <p className="mt-4 text-slate-400">
+          © 2026 OUR-FAMILY
+        </p>
+      </footer>
+    </div>
+  );
+}
