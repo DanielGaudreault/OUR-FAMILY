@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
+    <link rel="shortcut icon" type="image/png" href="images/MyLogo.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/MyLogo.png">
 </head>
 <body>
-    <!-- ===== LOGO - TOP LEFT ===== -->
     <div class="home-link" onclick="goToHomePage()">
         <img src="images/MyLogo.png" alt="Home">
     </div>
 
-    <!-- ===== SIDE TAB ===== -->
     <div class="side-tab" id="sideTab">
         <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
         <a href="family.html" class="nav-link"><i class="fas fa-users"></i> Family</a>
@@ -26,12 +25,10 @@
         <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 
-    <!-- ===== MENU BUTTON - TOP RIGHT ===== -->
     <button class="side-tab-toggle" onclick="toggleSideTab()">
         <span class="side-tab-span">Menu</span>
     </button>
 
-    <!-- ===== PAGE CONTENT - CENTERED ===== -->
     <section class="page-hero">
         <div class="page-content" style="max-width: 1000px; margin: 0 auto;">
             <h1>🖼️ Family Gallery</h1>
@@ -68,7 +65,6 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2026 Family Roots. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
         <div class="social-icons">
@@ -128,7 +124,7 @@
 
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-image: url('images/family-wallpaper.jpg');
+            background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -277,6 +273,7 @@
             border-radius: 5px;
             text-align: center;
             transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
         }
 
         .highlight-card:hover {
