@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Our Family · Gallery</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Roots · Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/MyLogo.png">
 </head>
 <body>
-    <header class="header-banner">
-        <div class="banner-content">
-            <h1>🏡 The Family Roots</h1>
-            <p>Together through generations · est. 1950</p>
-        </div>
-    </header>
+    <div class="home-link" onclick="goToHomePage()">
+        <img src="images/MyLogo.png" alt="Home">
+    </div>
 
-    <nav class="top-nav">
-        <div class="nav-inner">
-            <div class="logo"><i class="fas fa-tree"></i><span>Family Roots</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="family.html">Family</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="side-tab" id="sideTab">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="family.html" class="nav-link">Family</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
 
-    <main class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
-        <h2 class="page-title">🖼️ Family gallery</h2>
-        <p class="page-subtitle">Moments we treasure.</p>
+    <button class="side-tab-toggle" onclick="toggleSideTab()">
+        <span class="side-tab-span"><i class="fas fa-bars"></i> Menu</span>
+    </button>
 
-        <div class="gallery-grid">
-            <div class="gallery-item"><i class="fas fa-image"></i> Summer '24</div>
-            <div class="gallery-item"><i class="fas fa-image"></i> Christmas</div>
-            <div class="gallery-item"><i class="fas fa-image"></i> Reunion</div>
-            <div class="gallery-item"><i class="fas fa-image"></i> Birthday</div>
-            <div class="gallery-item"><i class="fas fa-image"></i> Trip</div>
-            <div class="gallery-item"><i class="fas fa-image"></i> Cousins</div>
-        </div>
-
-        <p class="gallery-note">(Placeholders – add your own cherished photos!)</p>
-    </main>
-
-    <footer class="footer-banner">
-        <div class="footer-content">
-            <p>© 2026 Family Roots · made with <i class="fas fa-heart"></i></p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-    <style>
-        .page-title { font-weight: 300; font-size: 2.8rem; text-align: center; color: #1a3a4a; border-bottom: 3px solid #e8b86d; padding-bottom: 0.5rem; }
-        .page-subtitle { margin: 1rem 0 2.5rem; font-size: 1.15rem; color: #3b5e6b; text-align: center; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px,1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-        .gallery-item { background: rgba(245,230,214,0.4); backdrop-filter: blur(4px); height: 150px; border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #3b5e6b; font-size: 1rem; border: 2px dashed rgba(232,184,109,0.4); transition: 0.3s; gap: 6px; }
-        .gallery-item i { font-size: 2.2rem; color: #e8b86d; }
-        .gallery-item:hover { background: rgba(245,230,214,0.8); border-color: #e8b86d; transform: translateY(-5px); }
-        .gallery-note { margin-top: 2.8rem; font-style: italic; color: #4b5f6b; text-align: center; }
-    </style>
-</body>
-</html>
+    <section class="page-hero" style="padding-top: 100px;">
+        <div class="page-content" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="color: #fff; font-size: 48px; font-weight: 300; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">🖼️ Family Gallery</h1>
+            <p style="color: #f0f0f0; text-align: center; font-size: 20px; margin-bottom: 40px;">Moments we treasure.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); height: 180px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(232,184,109,0.3); transition: all 0.3s ease; gap: 10px;">
+                    <i class="fas fa-image" style="font-size: 40px; color: #e8b86d;"></i>
+                    <span style="color: #f0f0f0; font-size: 16px;">Summer '24</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); height: 180px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(232,184,109,0.3); transition: all 0.3s ease; gap: 10px;">
+                    <i class="fas fa-image" style="font-size: 40px; color: #e8b86d;"></i>
+                    <span style="color: #f0f0f0; font-size: 16px;">Christmas</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); height: 180px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(232,184,109,0.3); transition: all 0.3s ease; gap: 10px;">
+                    <i class="fas fa-image" style="font-size: 40px; color: #e8b86d;"></i>
+                    <span style="color: #f0f0f0; font-size: 16px;">Reunion</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); height: 180px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(232,184,109,0.3); transition: all 0.3s ease; gap: 10px;">
+                    <i class="fas fa-image" style="font-size: 40px; color: #e8b86d;"></i>
+                    <span style="color: #f0f0f0; font-size: 16px;">Birthday</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); height: 180px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(232,184,109,0.3); transition:
