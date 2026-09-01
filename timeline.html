@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Our Family · Timeline</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Roots · Timeline</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/MyLogo.png">
 </head>
 <body>
-    <header class="header-banner">
-        <div class="banner-content">
-            <h1>🏡 The Family Roots</h1>
-            <p>Together through generations · est. 1950</p>
-        </div>
-    </header>
+    <div class="home-link" onclick="goToHomePage()">
+        <img src="images/MyLogo.png" alt="Home">
+    </div>
 
-    <nav class="top-nav">
-        <div class="nav-inner">
-            <div class="logo"><i class="fas fa-tree"></i><span>Family Roots</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="family.html">Family</a></li>
-                <li><a href="timeline.html" class="active">Timeline</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="side-tab" id="sideTab">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="family.html" class="nav-link">Family</a>
+        <a href="timeline.html" class="nav-link active">Timeline</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
 
-    <main class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
-        <h2 class="page-title">⏳ Family timeline</h2>
+    <button class="side-tab-toggle" onclick="toggleSideTab()">
+        <span class="side-tab-span"><i class="fas fa-bars"></i> Menu</span>
+    </button>
 
-        <ul class="timeline-list">
-            <li><span class="year">1950s</span> <span>Grandparents meet and marry – the beginning.</span></li>
-            <li><span class="year">1970s</span> <span>Our parents are born, family grows.</span></li>
-            <li><span class="year">1990s</span> <span>New generation: siblings and cousins arrive.</span></li>
-            <li><span class="year">2010s</span> <span>Graduations, weddings, new babies.</span></li>
-            <li><span class="year">Today</span> <span>Still growing, still together.</span></li>
-        </ul>
-
-        <div class="timeline-footer">
-            <i class="fas fa-camera"></i> More memories in the <a href="gallery.html">gallery</a>.
-        </div>
-    </main>
-
-    <footer class="footer-banner">
-        <div class="footer-content">
-            <p>© 2026 Family Roots · made with <i class="fas fa-heart"></i></p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+    <section class="page-hero" style="padding-top: 100px;">
+        <div class="page-content" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="color: #fff; font-size: 48px; font-weight: 300; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">⏳ Family Timeline</h1>
+            
+            <div style="margin-top: 40px;">
+                <div style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center;">
+                    <span style="font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 20px;">1950s</span>
+                    <span style="color: #f0f0f0; font-size: 18px;">Grandparents meet and marry – the beginning.</span>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center;">
+                    <span style="font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 20px;">1970s</span>
+                    <span style="color: #f0f0f0; font-size: 18px;">Our parents are born, family grows.</span>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center;">
+                    <span style="font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 20px;">1990s</span>
+                    <span style="color: #f0f0f0; font-size: 18px;">New generation: siblings and cousins arrive.</span>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center;">
+                    <span style="font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 20px;">2010s</span>
+                    <span style="color: #f0f0f0; font-size: 18px;">Graduations, weddings, new babies.</span>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 20px 0; align-items: center;">
+                    <span style="font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 20px;">Today</span>
+                    <span style="color: #f0f0f0; font-size: 18px;">Still growing, still together.</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; background: rgba(0,0,0,0.3); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(232,184,109,0.3);">
+                <i class="fas fa-camera" style="color: #e8b86d; font-size: 24px; margin-right: 10px;"></i>
+                <a href="gallery.html" style="color: #e8b86d; font-size: 18px; text-decoration: none; font-weight: 500;">View our gallery</a>
             </div>
         </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Family Roots. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
+        <div class="social-icons">
+            <a href="#" class="social-icon" onclick="showMessage('Facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Twitter')"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Instagram')"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('YouTube')"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" onclick="showMessage('Pinterest')"><i class="fab fa-pinterest"></i></a>
+        </div>
     </footer>
+
     <script src="script.js"></script>
-    <style>
-        .page-title { font-weight: 300; font-size: 2.8rem; text-align: center; color: #1a3a4a; border-bottom: 3px solid #e8b86d; padding-bottom: 0.5rem; }
-        .timeline-list { list-style: none; margin: 2.5rem auto; max-width: 700px; }
-        .timeline-list li { display: flex; gap: 2rem; padding: 1rem 0; border-bottom: 2px solid rgba(232,184,109,0.25); align-items: center; }
-        .timeline-list li:last-child { border-bottom: none; }
-        .year { font-weight: 700; min-width: 90px; color: #e8b86d; font-size: 1.2rem; }
-        .timeline-footer { background: rgba(245,230,214,0.5); backdrop-filter: blur(6px); padding: 1.8rem; border-radius: 32px; text-align: center; border: 2px solid rgba(232,184,109,0.3); }
-        .timeline-footer a { color: #2c5f6e; font-weight: 600; }
-        .timeline-footer a:hover { color: #e8b86d; }
-    </style>
 </body>
 </html>
