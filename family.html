@@ -6,6 +6,7 @@
     <title>Family Roots · Family</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
 </head>
 <body>
@@ -14,43 +15,43 @@
     </div>
 
     <div class="side-tab" id="sideTab">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="family.html" class="nav-link active">Family</a>
-        <a href="timeline.html" class="nav-link">Timeline</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="achievements.html" class="nav-link">Achievements</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="family.html" class="nav-link active"><i class="fas fa-users"></i> Family</a>
+        <a href="timeline.html" class="nav-link"><i class="fas fa-clock"></i> Timeline</a>
+        <a href="gallery.html" class="nav-link"><i class="fas fa-image"></i> Gallery</a>
+        <a href="achievements.html" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 
     <button class="side-tab-toggle" onclick="toggleSideTab()">
-        <span class="side-tab-span"><i class="fas fa-bars"></i> Menu</span>
+        <span class="side-tab-span">Menu</span>
     </button>
 
-    <section class="page-hero" style="padding-top: 100px;">
-        <div class="page-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    <section class="page-hero">
+        <div class="page-content">
             <h1 style="color: #fff; font-size: 48px; font-weight: 300; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">👨‍👩‍👧‍👦 Our Family</h1>
             <p style="color: #f0f0f0; text-align: center; font-size: 20px; margin-bottom: 40px;">Three generations, one big heart.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-user-tie" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
-                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Grandpa & Grandma</h3>
-                    <p style="color: #ddd;">Founders, storytellers, the roots.</p>
+                <div class="highlight-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Grandpa & Grandma</h3>
+                    <p>Founders, storytellers, the roots.</p>
                 </div>
-                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-user-friends" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
-                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Mom & Dad</h3>
-                    <p style="color: #ddd;">The pillars, always there.</p>
+                <div class="highlight-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Mom & Dad</h3>
+                    <p>The pillars, always there.</p>
                 </div>
-                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-child" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
-                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Kids & Cousins</h3>
-                    <p style="color: #ddd;">Laughter, energy, and joy.</p>
+                <div class="highlight-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Kids & Cousins</h3>
+                    <p>Laughter, energy, and joy.</p>
                 </div>
-                <div class="family-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-paw" style="font-size: 48px; color: #e8b86d; margin-bottom: 15px;"></i>
-                    <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">Our Pets</h3>
-                    <p style="color: #ddd;">Four-legged family members.</p>
+                <div class="highlight-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Our Pets</h3>
+                    <p>Four-legged family members.</p>
                 </div>
             </div>
             
