@@ -1,260 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>OUR-FAMILY</title>
 
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-
-<link href="https://fonts.googleapis.com/css2?ns:wght@300;400;500;700;900&display=swap
-
-style.css
-
-</head>
-
-<body>
-
-<div id="particles"></div>
-
-<nav>
-
-<div class="logo">
-
-🏡 OUR-FAMILY
-
-</div>
-
-<ul>
-
-<li><a href="#home">Home</i>#familyFamily</a></li>
-
-<li><timelineTimeline</a></li>
-
-<li><galleryGallery</a></li>
-
-<li><a href="#ues</a></li>
-
-<li><contactContact</a></li>
-
-</ul>
-
-<button id="themeBtn">
-🌙
-</button>
-
-</nav>
-
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>
-Our Family Legacy
-</h1>
-
-<p>
-
-A place where memories, love,
-traditions and future generations
-come together forever.
-
-</p>
-
-#family
-
-Explore Our Story
-
-</a>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stat-box">
-
-<h2>5</h2>
-
-<p>Generations</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>1200+</h2>
-
-<p>Photos</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>75+</h2>
-
-<p>Years of Memories</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>100%</h2>
-
-<p>Family Love</p>
-
-</div>
-
-</section>
-
-<section id="family">
-
-<h2>Meet Our Family</h2>
-
-<div class="cards">
-
-<div class="card">
-
-images/dad.jpg
-
-<h3>Dad</h3>
-
-<p>
-The foundation of our family.
-</p>
-
-</div>
-
-<div class="card">
-
-images/mom.jpg
-
-<h3>Mom</h3>
-
-<p>
-The heart of our family.
-</p>
-
-</div>
-
-<div class="card">
-
-images/children.jpg
-
-<h3>Children</h3>
-
-<p>
-The future generation.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="timeline">
-
-<h2>Family Timeline</h2>
-
-<div class="timeline">
-
-<div class="event">
-1985 • Family Journey Begins
-</div>
-
-<div class="event">
-1995 • Parents Meet
-</div>
-
-<div class="event">
-2000 • Marriage
-</div>
-
-<div class="event">
-2005 • Family Expands
-</div>
-
-<div class="event">
-2026 • OUR-FAMILY Website Launch
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Memory Gallery</h2>
-
-<div class="gallery">
-
-images/photo1.jpg
-images/photo2.jpg
-images/photo3.jpg
-images/photo4.jpg
-<img srchoto5.jpg
-images/photo6.jpg
-
-</div>
-
-</section>
-
-<section id="values">
-
-<h2>Our Values</h2>
-
-<div class="values">
-
-<div>❤️ Love</div>
-
-<div>🤝 Respect</div>
-
-<div>🌍 Community</div>
-
-<div>🏆 Excellence</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact Family Directory</h2>
-
-<form>
-
-<input type="text" placeholder="Name">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Message"></textarea>
-
-<button>
-Send Message
-</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<h3>🏡 OUR-FAMILY</h3>
-
-<p>
-Our Story • Our Memories • Our Future
-</p>
-
-<div id="clock"></div>
-
-</footer>
-
-script.jsscript>
-
-</body>
-</html>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#08111f;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:900;
+color:#ffd166;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffd166;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.75)
+),
+url("https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1920");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:850px;
+padding:20px;
+}
+
+.hero h1{
+font-size:80px;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 40px;
+border-radius:50px;
+background:#ffd166;
+color:black;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:100px 10%;
+text-align:center;
+}
+
+h2{
+font-size:48px;
+margin-bottom:50px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat{
+padding:35px;
+background:#11233c;
+border-radius:20px;
+}
+
+.stat h3{
+font-size:50px;
+color:#ffd166;
+}
+
+.family-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#11233c;
+padding:25px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.
