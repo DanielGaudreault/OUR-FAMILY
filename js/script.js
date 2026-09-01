@@ -1,13 +1,12 @@
 // ===== script.js – all interactions =====
 
-// Function to show popup message
+// Function to display popup message
 function showMessage(platform) {
     Swal.fire({
         title: platform,
         text: 'You clicked on ' + platform,
         icon: 'info',
-        confirmButtonText: 'Close',
-        confirmButtonColor: '#e8b86d'
+        confirmButtonText: 'Close'
     });
 }
 
