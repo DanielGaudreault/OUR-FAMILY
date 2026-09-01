@@ -1,4 +1,4 @@
-// ===== script.js – all interactions =====
+// ===== script.js =====
 
 // Function to display popup message
 function showMessage(platform) {
