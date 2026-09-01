@@ -1,7 +1,7 @@
-// script.js – polished interactions
+// script.js – smooth interactions
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Hero title hover effect
+  // Hero title hover
   const heroTitle = document.querySelector('.hero h1');
   if (heroTitle) {
     heroTitle.addEventListener('mouseenter', () => heroTitle.style.color = '#d4a373');
@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Update footer year dynamically
-  const footerYear = document.querySelector('footer p');
+  const footerYear = document.querySelector('.footer-content p');
   if (footerYear) {
     const year = new Date().getFullYear();
     footerYear.textContent = footerYear.textContent.replace('2026', year);
   }
 
-  console.log('🌳 Family Roots — beautifully enhanced.');
+  console.log('🌳 Family Roots — premium edition loaded.');
 });
