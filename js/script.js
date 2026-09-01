@@ -1,25 +1,32 @@
-const btn = document.getElementById("themeBtn");
+const themeBtn = document.getElementById("themeBtn");
 
-btn.onclick = () => {
+themeBtn.addEventListener("click", () => {
 
 document.body.classList.toggle("light");
 
-if(document.body.classList.contains("light"))
-{
-btn.innerHTML = "☀️";
-}
-else
-{
-btn.innerHTML = "🌙";
+if(document.body.classList.contains("light")){
+themeBtn.innerHTML = "☀️";
+}else{
+themeBtn.innerHTML = "🌙";
 }
 
-};
+});
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("Thank you! Your message has been received.");
+
+});
 
 function updateClock(){
 
 const now = new Date();
 
-document.getElementById("clock").innerHTML =
+document.getElementById("clock").textContent =
 now.toLocaleString();
 
 }
@@ -27,14 +34,3 @@ now.toLocaleString();
 setInterval(updateClock,1000);
 
 updateClock();
-
-document.querySelector("form")
-.addEventListener("submit",(e)=>{
-
-e.preventDefault();
-
-alert(
-"Message saved successfully!"
-);
-
-});
