@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* ===== HOME LINK (LOGO) ===== */
+/* ===== HOME LINK (LOGO - LEFT) ===== */
 .home-link {
     position: fixed;
     top: 15px;
@@ -87,16 +87,15 @@ body {
     width: 20px;
 }
 
-/* ===== MENU TOGGLE BUTTON ===== */
+/* ===== MENU TOGGLE BUTTON - TOP RIGHT ===== */
 .side-tab-toggle {
-    background: linear-gradient(135deg, #1a3a4a, #3b7a89);
-    border: none;
-    border-radius: 12px;
+    background-image: linear-gradient(135deg, #008aff, #86d472);
+    border-radius: 6px;
     box-sizing: border-box;
     color: #ffffff;
     display: block;
     height: 50px;
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: 600;
     padding: 4px;
     position: fixed;
@@ -106,6 +105,7 @@ body {
     width: 7em;
     z-index: 1000;
     cursor: pointer;
+    border: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
@@ -116,23 +116,22 @@ body {
 
 .side-tab-toggle .side-tab-span {
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background: #0e0e10;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
-    gap: 8px;
     height: 100%;
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
     width: 100%;
 }
 
 .side-tab-toggle:hover .side-tab-span {
-    background: rgba(0, 0, 0, 0.1);
+    background: transparent;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION - CENTERED ===== */
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,6 +139,7 @@ body {
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
+    padding: 100px 20px 60px;
 }
 
 .hero-content {
@@ -196,7 +196,7 @@ body {
     margin-left: 8px;
 }
 
-/* ===== INTRO SECTION ===== */
+/* ===== INTRO SECTION - CENTERED ===== */
 .intro-section {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
@@ -225,7 +225,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ===== HIGHLIGHTS SECTION ===== */
+/* ===== HIGHLIGHTS SECTION - CENTERED ===== */
 .highlights-section {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
@@ -317,6 +317,24 @@ footer p {
     background: rgba(232, 184, 109, 0.2);
 }
 
+/* ===== PAGE HERO FOR SUBPAGES ===== */
+.page-hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    padding-top: 100px;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -336,10 +354,13 @@ footer p {
         width: 5em;
         font-size: 0.9em;
         right: 10px;
+        top: 15px;
     }
     
     .home-link img {
         width: 45px;
+        top: 10px;
+        left: 10px;
     }
     
     .intro-content h2 {
@@ -348,5 +369,9 @@ footer p {
     
     .highlights-content {
         grid-template-columns: 1fr;
+    }
+    
+    .page-hero {
+        padding-top: 80px;
     }
 }
