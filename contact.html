@@ -6,6 +6,7 @@
     <title>Family Roots · Contact</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
 </head>
 <body>
@@ -14,33 +15,33 @@
     </div>
 
     <div class="side-tab" id="sideTab">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="family.html" class="nav-link">Family</a>
-        <a href="timeline.html" class="nav-link">Timeline</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="achievements.html" class="nav-link">Achievements</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="family.html" class="nav-link"><i class="fas fa-users"></i> Family</a>
+        <a href="timeline.html" class="nav-link"><i class="fas fa-clock"></i> Timeline</a>
+        <a href="gallery.html" class="nav-link"><i class="fas fa-image"></i> Gallery</a>
+        <a href="achievements.html" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a>
+        <a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a>
     </div>
 
     <button class="side-tab-toggle" onclick="toggleSideTab()">
-        <span class="side-tab-span"><i class="fas fa-bars"></i> Menu</span>
+        <span class="side-tab-span">Menu</span>
     </button>
 
-    <section class="page-hero" style="padding-top: 100px;">
-        <div class="page-content" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+    <section class="page-hero">
+        <div class="page-content" style="max-width: 800px; margin: 0 auto;">
             <h1 style="color: #fff; font-size: 48px; font-weight: 300; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">📬 Reach Out</h1>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
-                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-envelope" style="font-size: 40px; color: #e8b86d; margin-bottom: 15px;"></i>
+                <div class="highlight-card">
+                    <i class="fas fa-envelope"></i>
                     <p style="color: #f0f0f0;"><strong>Email</strong><br>family@roots.com</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-phone-alt" style="font-size: 40px; color: #e8b86d; margin-bottom: 15px;"></i>
+                <div class="highlight-card">
+                    <i class="fas fa-phone-alt"></i>
                     <p style="color: #f0f0f0;"><strong>Phone</strong><br>+1 (555) 202-2026</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
-                    <i class="fas fa-map-pin" style="font-size: 40px; color: #e8b86d; margin-bottom: 15px;"></i>
+                <div class="highlight-card">
+                    <i class="fas fa-map-pin"></i>
                     <p style="color: #f0f0f0;"><strong>Gatherings</strong><br>Virtual & in-person</p>
                 </div>
             </div>
