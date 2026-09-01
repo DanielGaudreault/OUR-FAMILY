@@ -1,23 +1,40 @@
-const toggle = document.getElementById("themeToggle");
+const btn = document.getElementById("themeBtn");
 
-toggle.addEventListener("click", () => {
+btn.onclick = () => {
 
-document.body.classList.toggle("light-mode");
+document.body.classList.toggle("light");
 
-if(document.body.classList.contains("light-mode")){
-toggle.innerHTML = "☀️";
+if(document.body.classList.contains("light"))
+{
+btn.innerHTML = "☀️";
 }
-else{
-toggle.innerHTML = "🌙";
+else
+{
+btn.innerHTML = "🌙";
 }
-});
 
-document.querySelector("form").addEventListener("submit", function(e){
+};
+
+function updateClock(){
+
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+document.querySelector("form")
+.addEventListener("submit",(e)=>{
 
 e.preventDefault();
 
 alert(
-"Message saved successfully. Connect this form to email or a database later."
+"Message saved successfully!"
 );
 
 });
