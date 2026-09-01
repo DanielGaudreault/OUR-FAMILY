@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/MyLogo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/MyLogo.png">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="home-link" onclick="goToHomePage()">
@@ -34,67 +32,36 @@
             <h1>🖼️ Family Gallery</h1>
             <p class="page-subtitle">Moments we treasure.</p>
             
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Summer '24</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Summer '24</p>
                 </div>
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Christmas</span>
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Christmas</p>
                 </div>
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Reunion</span>
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Reunion</p>
                 </div>
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Birthday</span>
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Birthday</p>
                 </div>
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Trip</span>
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Trip</p>
                 </div>
-                <div class="gallery-item">
-                    <i class="fas fa-image"></i>
-                    <span>Cousins</span>
+                <div class="highlight-card" style="height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-image" style="font-size: 40px;"></i>
+                    <p style="color: #f0f0f0; margin-top: 10px;">Cousins</p>
                 </div>
             </div>
             
             <p style="margin-top: 40px; font-style: italic; color: #ddd; text-align: center;">(Placeholders – add your own cherished photos!)</p>
         </div>
     </section>
-
-    <style>
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .gallery-item {
-            background: rgba(255,255,255,0.1);
-            height: 180px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed rgba(255,213,79,0.3);
-            transition: all 0.3s ease;
-            gap: 10px;
-            color: #f0f0f0;
-            cursor: pointer;
-        }
-        .gallery-item i {
-            font-size: 40px;
-            color: #ffd54f;
-        }
-        .gallery-item:hover {
-            background: rgba(255,255,255,0.2);
-            border-color: #ffd54f;
-            transform: translateY(-5px);
-        }
-    </style>
 
     <footer>
         <p>&copy; 2026 Family Roots. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
