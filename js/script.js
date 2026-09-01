@@ -1,14 +1,23 @@
-console.log("OUR-FAMILY LOADED");
+const toggle = document.getElementById("themeToggle");
 
-window.addEventListener("scroll", () => {
+toggle.addEventListener("click", () => {
 
-let nav = document.querySelector("nav");
+document.body.classList.toggle("light-mode");
 
-if(window.scrollY > 50){
-nav.style.background = "#000";
+if(document.body.classList.contains("light-mode")){
+toggle.innerHTML = "☀️";
 }
 else{
-nav.style.background = "#1b1b1b";
+toggle.innerHTML = "🌙";
 }
+});
+
+document.querySelector("form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert(
+"Message saved successfully. Connect this form to email or a database later."
+);
 
 });
