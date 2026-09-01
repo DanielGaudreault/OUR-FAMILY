@@ -1,33 +1,57 @@
-// ===== script.js – smooth interactions =====
+// ===== script.js – all interactions =====
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    // Hero icon bounce (already animated via CSS, but we add extra)
-    const heroIcon = document.querySelector('.hero-icon i');
-    if (heroIcon) {
-        heroIcon.addEventListener('mouseenter', () => {
-            heroIcon.style.transform = 'scale(1.2) rotate(5deg)';
-            heroIcon.style.transition = '0.3s';
-        });
-        heroIcon.addEventListener('mouseleave', () => {
-            heroIcon.style.transform = '';
-        });
-    }
-
-    // Card click feedback
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function () {
-            this.style.transform = 'scale(0.97)';
-            setTimeout(() => this.style.transform = '', 180);
-        });
+// Function to show popup message
+function showMessage(platform) {
+    Swal.fire({
+        title: platform,
+        text: 'You clicked on ' + platform,
+        icon: 'info',
+        confirmButtonText: 'Close',
+        confirmButtonColor: '#e8b86d'
     });
+}
 
-    // Update footer year dynamically
-    const footerYear = document.querySelector('.footer-content p');
+// Function to navigate to home page
+function goToHomePage() {
+    window.location.href = 'index.html';
+}
+
+// Function to toggle side tab visibility
+function toggleSideTab() {
+    var sideTab = document.getElementById('sideTab');
+    sideTab.classList.toggle('active');
+}
+
+// Close side tab when clicking outside
+document.addEventListener('click', function(event) {
+    var sideTab = document.getElementById('sideTab');
+    var toggleBtn = document.querySelector('.side-tab-toggle');
+    
+    if (sideTab.classList.contains('active')) {
+        if (!sideTab.contains(event.target) && !toggleBtn.contains(event.target)) {
+            sideTab.classList.remove('active');
+        }
+    }
+});
+
+// Add active class to current page link
+document.addEventListener('DOMContentLoaded', function() {
+    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    var links = document.querySelectorAll('.side-tab a');
+    
+    links.forEach(function(link) {
+        var linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Update footer year
+    var footerYear = document.querySelector('footer p');
     if (footerYear) {
-        const year = new Date().getFullYear();
+        var year = new Date().getFullYear();
         footerYear.textContent = footerYear.textContent.replace('2026', year);
     }
-
-    console.log('🌳 Family Roots — vibrant edition loaded!');
 });
+
+console.log('🌳 Family Roots — website loaded!');
